@@ -14,7 +14,7 @@ open class RemoteLoggerConfiguration: LoggerConfigurationBase {
 		)
 	}
     
-    @discardableResult func setEndpoint(_ endpoint: URL) -> Self {
+    @discardableResult public func setEndpoint(_ endpoint: URL) -> Self {
         self.remoteRecorder.endpoint = endpoint
         return self
     }
