@@ -70,5 +70,4 @@ private extension LoggerReceptacle {
 		}
 		return dispatcher
 	}
-
 }

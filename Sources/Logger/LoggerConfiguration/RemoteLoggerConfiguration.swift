@@ -1,21 +1,21 @@
 import Foundation
 
 open class RemoteLoggerConfiguration: LoggerConfigurationBase {
-    let remoteRecorder: RemoteLoggerRecorder
-    
+	let remoteRecorder: RemoteLoggerRecorder
+	
 	public override init(minimumSeverity: LoggerSeverity = .warn, recorders: [LoggerRecorder] = [], synchronousMode: Bool = false) {
 		var recorders = recorders
-        self.remoteRecorder = RemoteLoggerRecorder()
-        recorders.append(self.remoteRecorder)
+		self.remoteRecorder = RemoteLoggerRecorder()
+		recorders.append(self.remoteRecorder)
 		super.init(
 			minimumSeverity: minimumSeverity,
 			recorders: recorders,
 			synchronousMode: synchronousMode
 		)
 	}
-    
-    @discardableResult public func setEndpoint(_ endpoint: URL) -> Self {
-        self.remoteRecorder.endpoint = endpoint
-        return self
-    }
+	
+	@discardableResult public func setEndpoint(_ endpoint: URL) -> Self {
+		self.remoteRecorder.endpoint = endpoint
+		return self
+	}
 }

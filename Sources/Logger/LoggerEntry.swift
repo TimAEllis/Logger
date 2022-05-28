@@ -61,7 +61,6 @@ public struct LoggerEntry {
 		self.processName = ProcessIdentification.current.processName
 		self.processID = ProcessIdentification.current.processID
 	}
-
 }
 
 public extension LoggerEntry {
